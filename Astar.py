@@ -186,7 +186,10 @@ def moving():
 	if board[i][j] != 'S': 
 		board[i][j] == 'P'
 		
-	pos = sortedans[0]
+	try:
+		pos = sortedans[0]
+	except:
+		return 0
 	print(pos)
 	#is_end()
 	remsortlist()
@@ -194,7 +197,10 @@ def moving():
 def remsortlist():
 	global listofans
 	listofans = sorted(listofans)
-	del listofans[0]
+	try:
+		del listofans[0]
+	except:
+		pass
 	moving()
 	
 	
